@@ -17,18 +17,20 @@ function spotifyCall() {
 
   spotify.search({ type: "track", query: search }, function(err, data) {
     if (err) {
-      return console.log("Error occurred: " + err);
-    }
-    var song = data.tracks.items[0];
+      updateLog("Error: " + err);
+      updateText();
+    } else {
+      var song = data.tracks.items[0];
 
-    updateLog('Spotify search results for "' + search + '":');
-    updateLog("------------------------------------------");
-    updateLog("  Artist: " + song.artists[0].name);
-    updateLog("    Song: " + song.name);
-    updateLog(" Preview: " + song.external_urls.spotify);
-    updateLog("   Album: " + song.album.name);
-    updateLog("------------------------------------------\n");
-    updateText();
+      updateLog('Spotify search results for "' + search + '":');
+      updateLog("------------------------------------------");
+      updateLog("  Artist: " + song.artists[0].name);
+      updateLog("    Song: " + song.name);
+      updateLog(" Preview: " + song.external_urls.spotify);
+      updateLog("   Album: " + song.album.name);
+      updateLog("------------------------------------------\n");
+      updateText();
+    }
   });
 }
 
@@ -67,7 +69,6 @@ function bandsInTownCall() {
     var band = response.data;
     updateLog('Concert search results for "' + search + '":');
     updateLog("------------------------------------------");
-    console.log(band);
 
     for (var i = 0; i < band.length; i++) {
       updateLog("   Venue: " + band[i].venue.name);
@@ -82,10 +83,18 @@ function bandsInTownCall() {
   });
 }
 
+function displayHelp() {
+  updateLog(
+    'Recognized commands:\n"spotify-this-song" to search for a song based on the title\nEx: spotify-this-song all the small things\n"movie-this" to search for a movie based on the movie title\nEx: movie-this the lion king\n"concert-this" to search for upcoming concerts for a given artist\nEx: concert-this lady gaga'
+  );
+  updateText();
+}
+
 function doWhatItSays() {
   fs.readFile("random.txt", "utf8", function(err, data) {
     if (err) {
-      console.log("Error code: " + err);
+      updateLog("Error code: " + err);
+      updateText();
     }
     userInput = [];
     userInput = data.split(",");
@@ -109,25 +118,38 @@ function updateText() {
 }
 
 function findCall(command) {
-  switch (command) {
-    case "spotify-this-song":
-      spotifyCall();
-      break;
-    case "movie-this":
-      omdbCall();
-      break;
-    case "concert-this":
-      bandsInTownCall();
-      break;
-    case "do-what-it-says":
-      doWhatItSays();
-      break;
-    default:
-      updateLog("Not a valid command");
-      break;
+  if (userInput.length > 1) {
+    switch (command) {
+      case "spotify-this-song":
+        spotifyCall();
+        break;
+      case "movie-this":
+        omdbCall();
+        break;
+      case "concert-this":
+        bandsInTownCall();
+        break;
+      case "do-what-it-says":
+        doWhatItSays();
+        break;
+      default:
+        updateLog(
+          command +
+            ": Not a valid command. Type 'help' to see recognized commands."
+        );
+        updateText();
+        break;
+    }
+  } else {
+    if (command === "help" || command === undefined) {
+      displayHelp();
+    } else {
+      updateLog(
+        "Please enter valid search criteria. Use the 'help' command to see examples."
+      );
+      updateText();
+    }
   }
-
-  //   updateLog(command, false);
 }
 
 findCall(userInput[0]);

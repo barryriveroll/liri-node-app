@@ -1,26 +1,30 @@
 
 
-IMDb search results for "harry potter":
+Please enter valid search criteria. Use the 'help' command to see examples.
+
+Spotify search results for "help":
 ------------------------------------------
-                 Title: Harry Potter and the Deathly Hallows: Part 2
-                  Year: 2011
-           IMDb Rating: 8.1/10
-Rotten Tomatoes Rating: 96%
-               Country: USA, UK
-              Language: English
-                  Plot: Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.
-                 Stars: Ralph Fiennes, Michael Gambon, Alan Rickman, Daniel Radcliffe
+  Artist: Haley Reinhart
+    Song: Can't Help Falling in Love
+ Preview: https://open.spotify.com/track/6yIHGmQLJxWAUZ1ZkENemN
+   Album: Better
 ------------------------------------------
 
 
-IMDb search results for "harry potter":
-------------------------------------------
-                 Title: Harry Potter and the Deathly Hallows: Part 2
-                  Year: 2011
-           IMDb Rating: 8.1/10
-Rotten Tomatoes Rating: 96%
-               Country: USA, UK
-              Language: English
-                  Plot: Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.
-                 Stars: Ralph Fiennes, Michael Gambon, Alan Rickman, Daniel Radcliffe
-------------------------------------------
+Please enter valid search criteria. Use the 'help' command to see examples.
+
+Recognized commands:
+"spotify-this-song" to search for a song based on the title
+Ex: spotify-this-song all the small things
+"movie-this" to search for a movie based on the movie title
+Ex: movie-this the lion king
+"concert-this" to search for upcoming concerts for a given artist
+Ex: concert-this lady gaga
+
+Recognized commands:
+"spotify-this-song" to search for a song based on the title
+Ex: spotify-this-song all the small things
+"movie-this" to search for a movie based on the movie title
+Ex: movie-this the lion king
+"concert-this" to search for upcoming concerts for a given artist
+Ex: concert-this lady gaga
