@@ -129,9 +129,6 @@ function findCall(command) {
       case "concert-this":
         bandsInTownCall();
         break;
-      case "do-what-it-says":
-        doWhatItSays();
-        break;
       default:
         updateLog(
           command +
@@ -141,13 +138,21 @@ function findCall(command) {
         break;
     }
   } else {
-    if (command === "help" || command === undefined) {
-      displayHelp();
-    } else {
-      updateLog(
-        "Please enter valid search criteria. Use the 'help' command to see examples."
-      );
-      updateText();
+    switch (command) {
+      case "help":
+        displayHelp();
+        break;
+      case undefined:
+        displayHelp();
+        break;
+      case "do-what-it-says":
+        doWhatItSays();
+        break;
+      default:
+        updateLog(
+          "Please enter valid search criteria. Use the 'help' command to see examples."
+        );
+        updateText();
     }
   }
 }

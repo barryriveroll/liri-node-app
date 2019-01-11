@@ -1,30 +1,22 @@
 
 
-Please enter valid search criteria. Use the 'help' command to see examples.
-
-Spotify search results for "help":
+Spotify search results for "bye bye bye":
 ------------------------------------------
-  Artist: Haley Reinhart
-    Song: Can't Help Falling in Love
- Preview: https://open.spotify.com/track/6yIHGmQLJxWAUZ1ZkENemN
-   Album: Better
+  Artist: *NSYNC
+    Song: Bye Bye Bye
+ Preview: https://open.spotify.com/track/62bOmKYxYg7dhrC6gH9vFn
+   Album: No Strings Attached
 ------------------------------------------
 
 
-Please enter valid search criteria. Use the 'help' command to see examples.
-
-Recognized commands:
-"spotify-this-song" to search for a song based on the title
-Ex: spotify-this-song all the small things
-"movie-this" to search for a movie based on the movie title
-Ex: movie-this the lion king
-"concert-this" to search for upcoming concerts for a given artist
-Ex: concert-this lady gaga
-
-Recognized commands:
-"spotify-this-song" to search for a song based on the title
-Ex: spotify-this-song all the small things
-"movie-this" to search for a movie based on the movie title
-Ex: movie-this the lion king
-"concert-this" to search for upcoming concerts for a given artist
-Ex: concert-this lady gaga
+IMDb search results for "there will be blood":
+------------------------------------------
+                 Title: There Will Be Blood
+                  Year: 2007
+           IMDb Rating: 8.2/10
+Rotten Tomatoes Rating: 91%
+               Country: USA
+              Language: English, American Sign Language
+                  Plot: A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.
+                 Stars: Daniel Day-Lewis, Martin Stringer, Matthew Braden Stringer, Jacob Stringer
+------------------------------------------

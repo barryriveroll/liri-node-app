@@ -19,6 +19,14 @@ A couple of extra tests and features exist. The random.txt file can be edited in
 
 A log (log.txt) also keeps track of both user commands and any errors.
 
+### Example Gifs
+
+![Gif showing movie search](./images/gif1.gif)
+
+![Gif showing concert search](./images/gif2.gif)
+
+![Gif showing search from text file](./images/gif3.gif)
+
 Created by Barry Riveroll //
 [Github](https://github.com/barryriveroll) //
 [Portfolio](https://barryriveroll.github.io/Portfolio/)
